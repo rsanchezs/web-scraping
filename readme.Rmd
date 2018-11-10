@@ -1,3 +1,7 @@
+
+# Pràctica 1: Web scraping
+
+
 ## Presentació
 
 Aquest repositori conté la pràctica  de _web scraping_ de l´assignatura __"Tipología i cicle de vida de les dades"__ del 
