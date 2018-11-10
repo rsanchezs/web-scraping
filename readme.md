@@ -1,7 +1,4 @@
 
-# Pràctica 1 
-
-* Podeu [visualitzar la documentació en](http://pages-themes.github.io/cayman), o  [use it today](#presentació).*
 
 
 
@@ -13,6 +10,4 @@ Aquest repositori conté la pràctica 1 de _web scraping_ de l´assignatura __"T
 En aquesta pràctica s´elabora un cas pràctic orientat a aprendre a identificar les dades rellevants per un projecte analític
 i usar les eines d´extracció de dades.
 
-
-## Competències
 
