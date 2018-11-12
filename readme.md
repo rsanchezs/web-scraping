@@ -1,7 +1,8 @@
 
 # Ranking Hope for Salem 2018
 
-![](img/hope_for_salem_10k_2018.jpg)
+
+![](img/10KMedia-Slide-16-9-2018.png)
 
 
 ## Presentació
@@ -55,10 +56,10 @@ atributs són els següentes:
 
 * **Numèriques:**
 
-  + **Discretes:** Chip Time, Chip Pace, Time to Start, Gun Time
-  + **Continues:** Place, Bib, Age, Age Group, Age Group Place 
+  + **Discretes:** `Chip Time`, `Chip Pace`, `Time to Start`, `Gun Time`
+  + **Continues:** `Place`, `Bib`, `Age`, `Age Group`, `Age Group Place`  <\br>
   
-* **Categòriques:** Gender, City, State
+* **Categòriques:** `Gender`, `City, State`
 
 La variable continua `Gender Place` està agrupada en classes on la marca de classe es 9. Les variables `Gender Place` i `Age Group Place` són les posicions respecte el total i estàn representades per un _string_.
 
@@ -89,9 +90,9 @@ Per acabar, s´ha de tenir en compte que els atributs poden contindré valors de
 
 ## Origen de les dades
 
-[HUBR TIMING - Race Timing Servide](http://www.hubertiming.com/home)
-HUBER TIMING, LLC. Copyright 2009 - 2018
-e-mail: timing@hubertiming.com
+[HUBR TIMING - Race Timing Servide](http://www.hubertiming.com/home) <\br>
+HUBER TIMING, LLC. Copyright 2009 - 2018  <\br>
+e-mail: timing@hubertiming.com  <\br>
 
 ## Llicència
 

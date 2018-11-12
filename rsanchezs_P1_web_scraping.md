@@ -1,13 +1,20 @@
+---
+output:
+  word_document:
+    highlight: zenburn
+    reference_docx: word-styles-reference-27.docx
+  pdf_document: default
+---
 
-# Ranking Hope for Salem 2018
 
 
-![](img/10KMedia-Slide-16-9-2018.png)
+
+
 
 
 ## Presentació
 
-Aquest repositori conté la pràctica  de _web scraping_ de l´assignatura __"Tipología i cicle de vida de les dades"__ del 
+Aquest document forma part la pràctica  de _web scraping_ de l´assignatura __"Tipología i cicle de vida de les dades"__ del 
 [Màster en Ciència de Dades de la UOC](https://estudios.uoc.edu/es/masters-universitarios/data-science/presentacion).
 
 L´objectiu principal d´aquesta pràctica és elaborar un cas pràctic orientat a aprendre a identificar les dades rellevants per un projecte analític i usar les eines d´extracció de dades.
@@ -20,11 +27,21 @@ aquest sentit s´han obtingut les dades de la cursa 10K solidària __Hope For Sa
 [^1]: http://www.hubertiming.com/
 [^2]: https://ugmsalem.org/walkforhope/
 
+## Format d´entrega
 
-## Fitxers de codi font
+La documentació generada en la realització de la pràctica es troba allotjada en GitHub al següent repositori:
+
+* https://github.com/rsanchezs/web-scraping
+
+En aquest repositori es poden trobar els següents fitxers
+
 
 * **src/scraper.py:** conté el _scraper_ que obté el conjunt de dades.
 * **data/ranking.csv:** arxiu CSV amb el conjunt de dades.
+
+Per altra banda, també es pot visitar el següent [enllaç](https://rsanchezs.github.io/web-scraping/) que conté la mateixa
+documentació que aquest document.
+
 
 ## Requisits
 
@@ -42,10 +59,17 @@ pip3 install html5lib
 
 La extracció de les dades ha sigut realitzada per Rubén Sánchez Sancho de la web  __Huber Timing__. Aquest conjunt de dades correspon a les classificacions en la carrera __Hope For Salem 2018__.
 
-| __Característiques conjunt de dades__  | Análisis multivarible, Series Temporales  |  __Nombre observacions__ | 129 | __Area__  | Social, Esports  |
+| __Característiques conjunt de dades__  | Análisis multivarible, Series Temporales  | 
+__Nombre observacions__ | 129 | __Area__  | Social, Esports  |
+|---|---|---|---|---|---|
 | __Característiques atributs__  | Enteros, Real, Categòriques  | __Nombre atributs__  |14 | __Dates obtingudes__  | 12/11/2018  |
 | __Tasques asociades__  | Classificació, Regresió  | __Valors desconeguts?__  | Sí  | _Nombre de webs consultades_  | 1 |
 
+
+|  |  |  |  |  |  |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
 
 ## Informació del conjunt de dades
@@ -57,7 +81,7 @@ atributs són els següentes:
 * **Numèriques:**
 
   + **Discretes:** `Chip Time`, `Chip Pace`, `Time to Start`, `Gun Time`
-  + **Continues:** `Place`, `Bib`, `Age`, `Age Group`, `Age Group Place`  <\br>
+  + **Continues:** `Place`, `Bib`, `Age`, `Age Group`, `Age Group Place`
   
 * **Categòriques:** `Gender`, `City, State`
 
@@ -90,13 +114,13 @@ Per acabar, s´ha de tenir en compte que els atributs poden contindré valors de
 
 ## Origen de les dades
 
-[HUBR TIMING - Race Timing Servide](http://www.hubertiming.com/home) <\br>
-HUBER TIMING, LLC. Copyright 2009 - 2018  <\br>
-e-mail: timing@hubertiming.com  <\br>
+[HUBR TIMING - Race Timing Servide](http://www.hubertiming.com/home)<\br>
+HUBER TIMING, LLC. Copyright 2009 - 2018 <\br>
+e-mail: timing@hubertiming.com <\br>
 
 ## Llicència
 
-
+![](img/cc0-88x31.png)
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <a rel="license"
