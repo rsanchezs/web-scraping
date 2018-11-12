@@ -31,7 +31,7 @@ La implementació del _scraper_ s´ha realitzat amb la versió 3.7.0 de Python. 
 si és necessari caldrà instal.lar els següents moduls, per exemple s´utilitzem
 `pip3`:
 
-```{python, engine.path = "C:\Users\Ruben\AppData\Local\Programs\Python\Python37-32\"}
+```{}
 pip3 install beautifulsoup
 pip3 install requests
 pip3 install html5lib
