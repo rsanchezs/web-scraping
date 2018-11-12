@@ -1,33 +1,67 @@
-from urllib.request import urlopen
+import requests
 from bs4 import BeautifulSoup
 import csv
-import re
-import pandas as pd
+import os
 
-url = "http://observon.blogspot.com/2017/08/clasificaciones-carrera-10k-nocturno.html?m=1"
+session = requests.Session()
+# Our "human" header; go to https://www.whatismybrowser.com/ to see what the Internet can see about your browser,
+# including what your header is. Below are the settings for a browser I used.
+header = {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+          "Accept-Language": "es-ES,es;q=0.9,ca;q=0.8,en;q=0.7",
+          "Connection": "keep-alive",
+          "Referrer": "https://www.google.com/",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/70.0.3538.77 Safari/537.36"}
 
-html = urlopen(url)
-soup = BeautifulSoup(html, "html5lib")
+# The URL we are visiting
+url = "http://www.hubertiming.com/results/2017GPTR10K"
+page = session.get(url, headers=header).text
 
-# Get all the tables in the web page
-tables = soup.find_all("table")
+soup = BeautifulSoup(page, "html5lib")
 
-# We only want the general ranking table
-table = tables[-1]
+table = soup.find(id="individualResults")
 
 ranking = []
+
 for row in table.find_all("tr"):
+
     cells = row.find_all("td")
-    if (len(cells) == 0):
+
+    if len(cells) == 0:
+
         continue
     else:
-        position = cells[0].find(text=True)
-        runner = cells[1].find(text=True)
-        time = cells[2].find(text=True)
-        element = [position, runner, time]
-        ranking.append(element)
+        place = cells[0].find(text=True)
+        bib = cells[1].find(text=True)
+        name = cells[2].find(text=True)
+        gender = cells[3].find(text=True)
+        city = cells[4].find(text=True)
+        state = cells[5].find(text=True)
+        chip_time = cells[6].find(text=True)
+        chip_pace = cells[7].find(text=True)
+        gender_place = cells[8].find(text=True)
+        age_group = cells[9].find(text=True)
+        age_group_place = cells[10].find(text=True)
+        time_to_start = cells[11].find(text=True)
+        gun_time = cells[12].find(text=True)
+        team = cells[13].find(text=True)
 
-with open("../data/ranking.csv", "w", newline="", encoding="utf-8") as file:
+    runner = [place, bib, name, gender, city, state, chip_pace, chip_pace,
+              gender_place, age_group, age_group_place, time_to_start, gun_time, team]
+
+    ranking.append(runner)
+
+headers = []
+
+for header_cell in table.find_all("th"):
+    headers.append(header_cell.find(text=True))
+
+path = os.path.abspath(os.path.join(os.getcwd(), "..")) + "/data"
+if not os.path.exists(path):
+    os.makedirs(path)
+
+with open(path + "/ranking.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
+    writer.writerow(header for header in headers)
     for runner in ranking:
         writer.writerow(runner)
