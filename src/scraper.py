@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 import csv
 import os
 
+
+
+
 session = requests.Session()
 # Our "human" header; go to https://www.whatismybrowser.com/ to see what the Internet can see about your browser,
 # including what your header is. Below are the settings for a browser I used.
@@ -14,15 +17,18 @@ header = {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image
                         "Chrome/70.0.3538.77 Safari/537.36"}
 
 # The URL we are visiting
-url = "http://www.hubertiming.com/results/2017GPTR10K"
+url = "http://www.hubertiming.com/results/2018Hope"
 page = session.get(url, headers=header).text
 
+# Creates a BeatutifulSoup object
 soup = BeautifulSoup(page, "html5lib")
 
+# Find the table individual results
 table = soup.find(id="individualResults")
 
+# For each row in the individual results pull up the runner and save it in
+# the ranking list
 ranking = []
-
 for row in table.find_all("tr"):
 
     cells = row.find_all("td")
@@ -51,15 +57,18 @@ for row in table.find_all("tr"):
 
     ranking.append(runner)
 
+# Find the headers columns of the table individual results and save it into
+# the header list
 headers = []
-
 for header_cell in table.find_all("th"):
     headers.append(header_cell.find(text=True))
 
+# Get the current working directory and creates a dir to save the data
 path = os.path.abspath(os.path.join(os.getcwd(), "..")) + "/data"
 if not os.path.exists(path):
     os.makedirs(path)
 
+# Creates a CSV file with the data 
 with open(path + "/ranking.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerow(header for header in headers)
