@@ -34,7 +34,9 @@ En aquest repositori es poden trobar els següents fitxers
 * **data/ranking.csv:** arxiu CSV amb el conjunt de dades.
 
 Per altra banda, també es pot visitar el següent [enllaç](https://rsanchezs.github.io/web-scraping/) que conté la mateixa
-documentació que aquest document.
+documentació que aquest document:
+
+* https://rsanchezs.github.io/web-scraping/
 
 
 ## Requisits
