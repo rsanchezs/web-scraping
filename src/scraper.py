@@ -41,19 +41,20 @@ for row in table.find_all("tr"):
         bib = cells[1].find(text=True)
         name = cells[2].find(text=True)
         gender = cells[3].find(text=True)
-        city = cells[4].find(text=True)
-        state = cells[5].find(text=True)
-        chip_time = cells[6].find(text=True)
-        chip_pace = cells[7].find(text=True)
+        age = cells[4].find(text=True)
+        city = cells[5].find(text=True)
+        state = cells[6].find(text=True)
+        chip_time = cells[7].find(text=True)
+        chip_pace = cells[8].find(text=True)
         gender_place = cells[8].find(text=True)
-        age_group = cells[9].find(text=True)
-        age_group_place = cells[10].find(text=True)
-        time_to_start = cells[11].find(text=True)
-        gun_time = cells[12].find(text=True)
-        team = cells[13].find(text=True)
+        age_group = cells[10].find(text=True)
+        age_group_place = cells[11].find(text=True)
+        time_to_start = cells[12].find(text=True)
+        gun_time = cells[13].find(text=True)
+       # team = cells[14].find(text=True)
 
-    runner = [place, bib, name, gender, city, state, chip_pace, chip_pace,
-              gender_place, age_group, age_group_place, time_to_start, gun_time, team]
+    runner = [place, bib, name, gender, age, city, state, chip_pace, chip_pace,
+              gender_place, age_group, age_group_place, time_to_start, gun_time]
 
     ranking.append(runner)
 
