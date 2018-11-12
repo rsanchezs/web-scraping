@@ -23,8 +23,19 @@ aquest sentit s´han obtingut les dades de la cursa 10K solidària __Hope For Sa
 
 ## Fitxers de codi font
 
+La documentació generada en la realització de la pràctica es troba allotjada en GitHub al següent repositori:
+
+* https://github.com/rsanchezs/web-scraping
+
+En aquest repositori es poden trobar els següents fitxers
+
+
 * **src/scraper.py:** conté el _scraper_ que obté el conjunt de dades.
 * **data/ranking.csv:** arxiu CSV amb el conjunt de dades.
+
+Per altra banda, també es pot visitar el següent [enllaç](https://rsanchezs.github.io/web-scraping/) que conté la mateixa
+documentació que aquest document.
+
 
 ## Requisits
 
@@ -42,10 +53,10 @@ pip3 install html5lib
 
 La extracció de les dades ha sigut realitzada per Rubén Sánchez Sancho de la web  __Huber Timing__. Aquest conjunt de dades correspon a les classificacions en la carrera __Hope For Salem 2018__.
 
-| __Característiques conjunt de dades__  | Análisis multivarible, Series Temporales  |  __Nombre observacions__ | 129 | __Area__  | Social, Esports  |
+| __Característiques conjunt de dades__  | <span style="font-weight:normal">Análisis multivarible, Series Temporales</span>  |  __Nombre observacions__ | <span style="font-weight:normal">129</span> | __Area__  | <span style="font-weight:normal">Social, Esports </span> |
 |---|---|---|---|---|---|
 | __Característiques atributs__  | Enteros, Real, Categòriques  | __Nombre atributs__  |14 | __Dates obtingudes__  | 12/11/2018  |
-| __Tasques asociades__  | Classificació, Regresió  | __Valors desconeguts?__  | Sí  | _Nombre de webs consultades_  | 1 |
+| __Tasques asociades__  | Classificació, Regresió  | __Valors desconeguts?__  | Sí  | __Nombre de webs consultades__  | 1 |
 
 
 
@@ -58,7 +69,7 @@ atributs són els següentes:
 * **Numèriques:**
 
   + **Discretes:** `Chip Time`, `Chip Pace`, `Time to Start`, `Gun Time`
-  + **Continues:** `Place`, `Bib`, `Age`, `Age Group`, `Age Group Place`  <\br>
+  + **Continues:** `Place`, `Bib`, `Age`, `Age Group`, `Age Group Place`  
   
 * **Categòriques:** `Gender`, `City, State`
 
