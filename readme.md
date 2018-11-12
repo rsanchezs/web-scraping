@@ -42,7 +42,6 @@ pip3 install html5lib
 La extracció de les dades ha sigut realitzada per Rubén Sánchez Sancho de la web  __Huber Timing__. Aquest conjunt de dades correspon a les classificacions en la carrera __Hope For Salem 2018__.
 
 | __Característiques conjunt de dades__  | Análisis multivarible, Series Temporales  |  __Nombre observacions__ | 129 | __Area__  | Social, Esports  |
-|---|---|---|---|---|---|
 | __Característiques atributs__  | Enteros, Real, Categòriques  | __Nombre atributs__  |14 | __Dates obtingudes__  | 12/11/2018  |
 | __Tasques asociades__  | Classificació, Regresió  | __Valors desconeguts?__  | Sí  | _Nombre de webs consultades_  | 1 |
 
@@ -57,7 +56,7 @@ atributs són els següentes:
 * **Numèriques:**
 
   + **Discretes:** Chip Time, Chip Pace, Time to Start, Gun Time
-  + **Continues:** Place, Bib, Age, Age Group, Age Group Place
+  + **Continues:** Place, Bib, Age, Age Group, Age Group Place 
   
 * **Categòriques:** Gender, City, State
 
@@ -91,7 +90,7 @@ Per acabar, s´ha de tenir en compte que els atributs poden contindré valors de
 ## Origen de les dades
 
 [HUBR TIMING - Race Timing Servide](http://www.hubertiming.com/home)
-HUBER TIMING, LLC. Copyright 2009 - 2018. 
+HUBER TIMING, LLC. Copyright 2009 - 2018
 e-mail: timing@hubertiming.com
 
 ## Llicència
@@ -115,4 +114,10 @@ This work is published from:
       content="ES" about="https://rsanchezs.github.io/web-scraping/">
   España</span>.
 </p>
+
+
+
+
+
+
 
