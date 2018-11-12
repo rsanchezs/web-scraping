@@ -1,6 +1,5 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import os
 import csv
 import re
 import pandas as pd
@@ -18,33 +17,17 @@ table = tables[-1]
 
 ranking = []
 for row in table.find_all("tr"):
-    cell = row.find_all("td")
-    runner = [elem.text.strip() for elem in cell]
-    ranking.append(runner)
+    cells = row.find_all("td")
+    if (len(cells) == 0):
+        continue
+    else:
+        position = cells[0].find(text=True)
+        runner = cells[1].find(text=True)
+        time = cells[2].find(text=True)
+        element = [position, runner, time]
+        ranking.append(element)
 
-col_names = ["Position", "Runner", "Time"]
-
-# Create a dataframe from the list
-data = pd.DataFrame(data=ranking, columns=col_names)
-
-data = data.drop([0])
-
-data.to_csv("../data/rankings.csv", encoding="utf-8", index=False)
-
-
-
-# for row in table.find_all("tr"):
-#     cells = row.find_all("td")
-#     if (len(cells) == 0):
-#         continue
-#     else:
-#         position = cells[0].find(text=True)
-#         runner = cells[1].find(text=True)
-#         time = cells[2].find(text=True)
-#         element = [position, runner, time]
-#         ranking.append(element)
-#
-# with open("../data/ranking.csv", "w", newline="", encoding="utf-8") as ranking_file:
-#     runner_writer = csv.writer(ranking_file)
-#     for runner in ranking:
-#         runner_writer.writerow(runner)
+with open("../data/ranking.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    for runner in ranking:
+        writer.writerow(runner)
